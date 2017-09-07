@@ -4,12 +4,14 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .form import adding
 import json
 
+
 # Create your views here.
 def index(request):
     addjson = adding()
     
     
     if 'submit' in request.POST:
+    	data1 = {}
         data2 = {}
         with open('/Users/kiosk/Desktop/inhaalex/mainapp/data.json') as data_file:    
              data2 = json.load(data_file.decode("utf-8"))
