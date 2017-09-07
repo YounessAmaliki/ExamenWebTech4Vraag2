@@ -19,9 +19,9 @@ def index(request):
         addjson = adding(request.POST)
         data = {}
         data['naam'] = addjson.cleaned_data['nnaam']
-        data['reden'] = addjson.cleaned_data['nreden']
-        data['datum'] = addjson.cleaned_data['ndatum']
-        data['examen'] = addjson.cleaned_data['nexamen']
+        data['reden'] = addjson.cleaned_data['ncalorieen']
+        data['datum'] = addjson.cleaned_data['ningredienten']
+        data['examen'] = addjson.cleaned_data['ntijd']
         json_data = json.dumps(data) 
         with open('/Users/kiosk/Desktop/inhaalex/mainapp/data.json', 'w') as outfile:
             json.dump(json_data, outfile)
